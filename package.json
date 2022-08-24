@@ -1,0 +1,24 @@
+{
+  "name": "@octabytes/format-phone",
+  "version": "1.0.0",
+  "description": "Convert phone number into human readable format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/octabytes/format-phone.git"
+  },
+  "keywords": [
+    "format-phone",
+    "phone",
+    "format"
+  ],
+  "author": "OctaByte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/octabytes/format-phone/issues"
+  },
+  "homepage": "https://github.com/octabytes/format-phone#readme"
+}
