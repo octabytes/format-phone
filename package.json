@@ -2,8 +2,17 @@
   "name": "@octabytes/format-phone",
   "version": "1.0.0",
   "description": "Convert phone number into human readable format",
-  "main": "index.js",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "exports": {
+    ".": "./build/index.js"
+  },
   "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +29,24 @@
   "bugs": {
     "url": "https://github.com/octabytes/format-phone/issues"
   },
-  "homepage": "https://github.com/octabytes/format-phone#readme"
+  "homepage": "https://github.com/octabytes/format-phone#readme",
+  "dependencies": {
+    "lodash.find": "^4.6.0",
+    "lodash.head": "^4.0.1",
+    "lodash.memoize": "^4.1.2",
+    "lodash.reduce": "^4.6.0",
+    "lodash.startswith": "^4.2.1",
+    "lodash.tail": "^4.1.1",
+    "lodash.trim": "^4.5.1"
+  },
+  "devDependencies": {
+    "@types/lodash.find": "^4.6.7",
+    "@types/lodash.head": "^4.0.7",
+    "@types/lodash.memoize": "^4.1.7",
+    "@types/lodash.reduce": "^4.6.7",
+    "@types/lodash.startswith": "^4.2.7",
+    "@types/lodash.tail": "^4.1.7",
+    "@types/lodash.trim": "^4.5.7",
+    "ts-node-dev": "^2.0.0"
+  }
 }

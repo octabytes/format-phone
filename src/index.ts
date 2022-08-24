@@ -1,19 +1,11 @@
-import {
-  some,
-  find,
-  reduce,
-  map,
-  filter,
-  includes,
-  findIndex,
-  head,
-  tail,
-  debounce,
-  memoize,
-  trim,
-  startsWith,
-  isString,
-} from "lodash";
+import find from "lodash.find";
+import reduce from "lodash.reduce";
+import head from "lodash.head";
+import tail from "lodash.tail";
+import memoize from "lodash.memoize";
+import trim from "lodash.trim";
+import startsWith from "lodash.startswith";
+
 import countryData from "./country_data";
 
 class PhoneNumberFormatter {
@@ -56,7 +48,7 @@ class PhoneNumberFormatter {
     return formattedNumber;
   }
 
-  private formatNumber = (text, pattern) => {
+  private formatNumber = (text: any, pattern: any) => {
     const disableCountryCode = false;
     const enableLongNumbers = false;
     const autoFormat = true;
@@ -132,12 +124,17 @@ class PhoneNumberFormatter {
           }
           return selectedCountry;
         },
-        { dialCode: "", priority: 10001 },
-        this
+        { dialCode: "", priority: 10001 }
       );
 
+      // @ts-ignore
       if (!bestGuess.name) return secondBestGuess;
       return bestGuess;
     }
   );
+}
+
+export default function formatPhone(phone: string): string {
+  const formatter = new PhoneNumberFormatter(phone);
+  return formatter.formatPhone();
 }

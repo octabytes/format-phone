@@ -1,0 +1,9 @@
+tsconfig.json
+
+build/
+
+.github
+
+node_modules/
+
+docs/
